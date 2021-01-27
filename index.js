@@ -4,6 +4,7 @@ const submissions = require('./router/submissions.js')
 const comments = require('./router/comments')
 const app = express()
 const cors = require('cors')
+const mongo = process.env.mongoURI
 require('dotenv').config()
 
 // sort deprecation warnings
@@ -29,7 +30,7 @@ const db = require('./keys.js').mongoURI
 app.use(express.json())
 
 mongoose
-  .connect(db)
+  .connect(mongo)
   .then(() => console.log('Mongo db connected...'))
   .catch(err => console.log(err))
 
