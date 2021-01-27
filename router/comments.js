@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
   const newComment = new Comment({
     user: req.body.user,
-    commentBody: converter.makeHtml(req.body.commentBody),
+    commentBody: req.body.commentBody,
     post: req.body.post
   });
   newComment.save().then(comment => res.json(comment));
