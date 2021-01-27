@@ -4,8 +4,9 @@ const submissions = require('./router/submissions.js')
 const comments = require('./router/comments')
 const app = express()
 const cors = require('cors')
-const mongo = process.env.mongoURI
 require('dotenv').config()
+const mongo = process.env.mongoURI
+const db = require('./keys.js').mongoURI
 
 // sort deprecation warnings
 mongoose.set('useNewUrlParser', true)
@@ -14,7 +15,6 @@ mongoose.set('useCreateIndex', true)
 mongoose.set('useUnifiedTopology', true)
 
 // Connect DB
-const db = require('./keys.js').mongoURI
 
 
 // // Avoid CORS error
@@ -38,4 +38,4 @@ mongoose
 app.use('/api/comments', comments)
 app.use('/api/submissions', submissions)
 
-app.listen(process.env.PORT || 5000, () => console.log(`Server started...`))
+app.listen(process.env.PORT || 6000, () => console.log(`Server started...`))
