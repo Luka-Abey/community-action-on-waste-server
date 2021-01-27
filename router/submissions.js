@@ -8,6 +8,11 @@ router.get('/', (req, res) => {
     .then(submissions => res.json(submissions))
 });
 
+router.get('/:id', (req, res) => {
+  Submission.findById(req.params.id)
+    .then(submissions => res.json(submissions))
+});
+
 router.post('/', (req, res) => {
   const newSubmission = new Submission({
     name: req.body.name,
