@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Submission = require('../models/Submission');
+const Submission = require('../models/submission');
 
 router.get('/', (req, res) => {
   Submission.find()
