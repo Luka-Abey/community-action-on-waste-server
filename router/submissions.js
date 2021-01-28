@@ -8,6 +8,7 @@ router.get('/', (req, res) => {
     .then(submissions => res.json(submissions))
 });
 
+//get individual, pass id in url
 router.get('/:id', (req, res) => {
   Submission.findById(req.params.id)
     .then(submissions => res.json(submissions))
