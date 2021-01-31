@@ -16,11 +16,16 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
   const newSubmission = new Submission({
-    name: req.body.name,
     title: req.body.title,
+    description: req.body.description,
+    benefit: req.body.benefit,
+    contribution: req.body.contribution,
+    skills: req.body.skills,
+    costs: req.body.costs,
+    maintenance: req.body.maintenance,
+    other: req.body.other,
     image: req.body.image,
     date: req.body.date,
-    text: req.body.text
   });
   newSubmission.save().then(submission => res.json(submission));
 });
