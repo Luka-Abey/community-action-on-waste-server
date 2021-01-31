@@ -18,13 +18,7 @@ mongoose.set('useUnifiedTopology', true)
 
 
 // // Avoid CORS error
-app.use(
-  cors({
-    // origin: url,
-    // credentials: true
-    // exposedHeaders: ['set-cookie']
-  })
-)
+app.use(cors({ origin: true }))
 
 // BodyParser
 app.use(express.json())
