@@ -12,27 +12,27 @@ const SubmissionSchema = new Schema({
   },
   benefit: {
     type: String,
-    required: true
+    required: false
   },
   contribution: {
     type: String,
-    required: true
+    required: false
   },
   skills: {
     type: String,
-    required: true
+    required: false
   },
   costs: {
     type: String,
-    required: true
+    required: false
   },
   maintenance: {
     type: String,
-    required: true
+    required: false
   },
   other: {
     type: String,
-    required: true
+    required: false
   },
   image: {
     type: String,
