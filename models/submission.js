@@ -10,6 +10,34 @@ const SubmissionSchema = new Schema({
     type: String,
     required: true
   },
+  description: {
+    type: String,
+    required: true
+  },
+  benefit: {
+    type: String,
+    required: true
+  },
+  contribution: {
+    type: String,
+    required: true
+  },
+  skills: {
+    type: String,
+    required: true
+  },
+  costs: {
+    type: String,
+    required: true
+  },
+  maintenance: {
+    type: String,
+    required: true
+  },
+  other: {
+    type: String,
+    required: true
+  },
   image: {
     type: String,
     required: false
@@ -17,10 +45,6 @@ const SubmissionSchema = new Schema({
   date: {
     type: Date,
     default: Date.now
-  },
-  text: {
-    type: String,
-    required: true
   }
 });
 
