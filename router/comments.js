@@ -8,6 +8,16 @@ router.get('/', (req, res) => {
     .then(comments => res.json(comments))
 });
 
+router.route("/:id").get(function(req, res) {
+  Comment.find({ 'post': req.params.post }, (err, comments) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.json(comments);
+    }
+  });
+});
+
 router.post('/', (req, res) => {
   const newComment = new Comment({
     user: req.body.user,
