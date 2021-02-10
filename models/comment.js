@@ -13,6 +13,10 @@ const CommentSchema = new Schema({
   submission: {
     type: String,
     required: true
+  },
+  user: {
+    type: String,
+    required: false
   }
 });
 
