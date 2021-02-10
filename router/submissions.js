@@ -25,6 +25,7 @@ router.post('/', (req, res) => {
     maintenance: req.body.maintenance,
     other: req.body.other,
     image: req.body.image,
+    contact: req.body.contact,
     date: req.body.date,
   });
   newSubmission.save().then(submission => res.json(submission));
