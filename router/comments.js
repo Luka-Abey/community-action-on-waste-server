@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
 });
 
 router.route("/:id").get(function(req, res) {
-  Comment.find({ 'post': req.params.post }, (err, comments) => {
+  Comment.find({ 'submission': req.params.id }, function(err, comments) {
     if (err) {
       console.log(err);
     } else {
