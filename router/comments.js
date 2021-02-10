@@ -22,7 +22,7 @@ router.post('/', (req, res) => {
   const newComment = new Comment({
     user: req.body.user,
     commentBody: req.body.commentBody,
-    post: req.body.post
+    submission: req.body.submission
   });
   newComment.save().then(comment => res.json(comment));
 });

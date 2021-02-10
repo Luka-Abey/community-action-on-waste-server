@@ -11,8 +11,8 @@ const CommentSchema = new Schema({
     required: true
   },
   submission: {
-    type: Schema.Types.ObjectId,
-    ref: "Submission"
+    type: String,
+    required: true
   }
 });
 

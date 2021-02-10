@@ -51,4 +51,4 @@ const SubmissionSchema = new Schema({
   }
 });
 
-module.exports = Submission = mongoose.model('post', SubmissionSchema); 
+module.exports = Submission = mongoose.model('submission', SubmissionSchema); 
