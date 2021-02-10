@@ -35,7 +35,8 @@ const SubmissionSchema = new Schema({
     required: false
   },
   contact: {
-    type: String
+    type: String,
+    required: false
   },
   image: {
     type: Array,
